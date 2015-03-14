@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "EnterRecipe";
+}
+@model project.Models.Menu
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h2>Welcome @Session["Name"].ToString() </h2>
+                <img src="~/Files/@Session["Image"].ToString()" width="300" height="275" alt="" />
+
+                <a href="~/Account/Login">Sign out</a>
+            </div>
+            <div id="content">
+                <h2> Enter Recipe of @Model.MTitle</h2>
+                
+                <br />
+                <form action="/Account/Save" method="post" enctype="multipart/form-data">
+                    <input name="mid" value="@Model.MId" type="hidden" />
+                    <h3>Recipe Title</h3>
+                    <input name="title" type="text" value="" size="30" required/>
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Ingredients</h3>
+                    <textarea name="ingred" rows="13" cols="50" required>
+                    </textarea>
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Description</h3>
+                    <textarea name="descrip" rows="13" cols="50" required>
+                        </textarea>
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Image of Recipe</h3>
+                    <input type="file" id="file" name="file" />
+                    <br />
+                    <br />
+        
+                    <input type="submit" value="Save" />
+                </form>
+
+                <br />
+
+            </div>
+            <br class="clear" />
+        </div>
+        <br class="clear" />
+    </div>
+
+</body>
+</html>
+

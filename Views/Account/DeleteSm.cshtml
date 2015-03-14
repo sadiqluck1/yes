@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "DeleteSm";
+}
+
+@{
+    ViewBag.Title = "DeleteMenu";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h2>Welcome @Session["Name"].ToString() </h2>
+                <img src="~/Files/@Session["Image"].ToString()" width="300" height="275" alt="" />
+
+                <br />
+                <a href="~/Account/AdminSelection">Back to Selection Category</a><br />
+                <a href="~/Account/Login">Sign out</a>
+
+            </div>
+            <div id="content">
+                <div class="blogpost">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Menu for Delete Recipe</h3>
+                </div>
+
+                <br />
+
+                <div id="nav1">
+                    @foreach (var i in Model)
+                    {
+                        <p><a href="~/Account/Delete/@i.SmId"> @i.SmTitle</a></p>
+                    }
+                </div>
+
+
+                <div id="bottom">
+                    <img src="~/images/4.png" width="500" height="275" alt="" />
+                </div>
+
+            </div>
+            <br class="clear" />
+        </div>
+        <br class="clear" />
+    </div>
+
+</body>
+</html>

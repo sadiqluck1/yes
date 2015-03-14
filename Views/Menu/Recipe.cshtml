@@ -1,0 +1,86 @@
+﻿@model project.Models.Recipe
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h2>@Model.RTitle</h2>
+                <br />
+                <h3>Ingredients</h3>
+
+                @{
+                    string line =  @Model.Ingredients;
+                    string[] data = line.Split(',');
+                }
+
+                @foreach(var i in data)
+                {
+                    @i<br />
+                }
+               
+            </div>
+            <div id="content">
+                <div id="rImage">
+                    <img src="~/Files/@Model.Image" width="400" height="300" alt="" />
+                </div>
+                <br />
+                 <h2>Description</h2>
+                @{
+                    string des = @Model.Description;
+                    string[] descrip = des.Split('.');
+                }
+                @foreach(var d in descrip)
+                {
+                    @d<br />
+                }
+                
+                <br />
+
+            </div>
+            <br class="clear" />
+        </div>
+        <br class="clear" />
+    </div>
+
+</body>
+</html>
+

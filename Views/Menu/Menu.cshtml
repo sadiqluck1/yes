@@ -1,0 +1,78 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h3>History of Chocolate</h3>
+                <p>
+                    Chocolate comes from cocoa beans, which grew on trees in Central America starting probably about 100 million years ago; cocoa trees may have gotten their start on the lower slopes of the Andes Mountains. Cocoa trees can only live in hot, rainy places near the Equator.<br /><br />
+                    The trees bear large orange fruit, about the size of small pumpkins. You pick the fruit, and many small beans are inside, like peas inside a peapod. The raw beans are really good for you, full of vitamin C and magnesium, but they're bitter. They also have a fair amount of caffeine in them, like coffee or tea, and can help you work harder than you could without cocoa. People probably ate cocoa beans as soon as they got to Central America, maybe about 15,000 BC.<br /><br />
+                    By around 2000 BC, pre-Olmec people in Central America (modern Mexico) were grinding up the beans and making them into a hot or cold spicy chocolate drink with vanilla or chili peppers in it or a sort of spicy porridge with corn and chilis in it. Sometimes people sweetened chocolate with honey. All the people of Central America - the Olmec, the Zapotec, the Moche, the Maya, and the Aztecs - liked chocolate. Our word chocolate probably comes from the Aztec phrase "cacaua atl" which means "cacao drink".<br /><br />
+                </p>
+            </div>
+            <div id="content">
+                <div class="blogpost">
+                    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Menu</h2>
+                </div>			
+                <div id="right">
+                    <img src="~/images/7.png" width="250" height="300" alt="" />
+                </div>
+                <br />
+              
+                <div id="nav1">
+                   @foreach(var i in Model)
+                   {
+                       <p><a href="~/Menu/SMenu/@i.MId"> @i.MTitle</a></p>     
+                   }
+                 </div>
+                 <div id="bottom">
+                     <img src="~/images/4.png" width="500" height="275" alt="" />
+                 </div>                
+          
+                </div>
+                <br class="clear" />
+          </div>
+            <br class="clear" />
+        </div>
+ 
+</body>
+</html>

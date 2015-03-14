@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Category";
+}
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+    Cookies n' Cream by FWT
+    www.freewebsitetemplat.es
+    Images by Image Base http://imagebase.davidniblack.com/
+    Released under the Creative Commons Attribution 3.0 License.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h3>Baking Chocolate</h3>
+                <p>
+                    "Unsweetened chocolate", also known as "bitter", "baking chocolate", or "cooking chocolate", is pure chocolate liquor mixed with some form of fat to produce a solid substance. The pure, ground, roasted cocoa beans impart a strong, deep chocolate flavor. 
+                    With the addition of sugar, however, it is used as the base for cakes, brownies, confections, and cookies.
+                </p>
+                <img  src="~/images/9.jpg" width="300" height="200" alt="" />
+                <br />
+                <br />
+                <h3>Brown Chocolate</h3>
+                <p>
+                    The color chocolate is a tone of dark brown that resembles chocolate.
+                    At right is displayed the color traditionally called chocolate.
+                    The first recorded use of chocolate as a color name in English was in 1737.
+                    This color is a representation of the color of the most common type of chocolate, milk chocolate.
+                </p>
+                <img src="~/images/11.jpg" width="300" height="195" alt="" />             
+            </div>
+            <div id="content">
+                <div id="box1">
+                    <div class="blogpost">
+                        <img class="left" src="~/images/8.jpg" width="250" height="275" alt="" />
+                        <br />
+                        <h2>White chocolate</h2>
+                       <p>In the 1930s, a white chocolate bar was launched in Europe by Swiss company Nestlé.
+                        In North America, Kuno Baedeker developed a white chocolate while working for the Merckens Chocolate Company in 1945.
+                        White chocolate is a chocolate derivative. It commonly consists of cocoa butter, sugar and milk solids and is characterized by a pale yellow or ivory appearance. 
+                        The melting point of cocoa butter, its primary cocoa bean component, is high enough to keep white chocolate solid at room temperature.</p>
+                    </div>
+
+                    <div id="box1">
+                        <div class="blogpost">
+                            
+                            <br />
+                           
+                        </div>
+                    </div>
+
+                    <div id="box1">
+                        <div class="blogpost">
+                            <img class="left" src="~/images/10.jpg" width="250" height="275" alt="" />
+                            <br />
+                            <h2>Black Chocolate</h2>
+                            <p>
+                                Swiss dark chocolate
+                                "Dark chocolate", also called "black chocolate", is produced by adding fat and sugar to cocoa.
+                                It is chocolate with no milk or much less than milk chocolate. The U.S. has no official definition for dark chocolate.
+                                Dark chocolate can be eaten as is, or used in cooking, for which thicker, baking bars, usually with high cocoa percentages ranging from 70% to 99% are sold.
+                                Dark is synonymous with semisweet, and extra dark with bittersweet, although the ratio of cocoa butter to solids may vary.
+                            </p>
+                        </div>
+                        <br />
+                        <br />
+                        <div id="advant">
+                            <a href="~/Home/DisAd">Advantage & Disadvantage of Chocolate</a>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+</body>
+</html>

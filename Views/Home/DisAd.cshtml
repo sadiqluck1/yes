@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "DisAd";
+ }
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+    Cookies n' Cream by FWT
+    www.freewebsitetemplat.es
+    Images by Image Base http://imagebase.davidniblack.com/
+    Released under the Creative Commons Attribution 3.0 License.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <h3>Advantages Of Chocolates</h3>
+                <p>
+                    A classic chocolate can definitely renew the soul for it has a chemical called tryptophan that helps the
+                    brain to function well and creates a feeling of excitement or elation. Moreover, it has anti-oxidants that can also be found in teas or wines.
+                </p>
+                <ul>
+                    <li>It lowers the cholesterol.</li>
+                    <li> Also lowers the Blood Pressure.</li>
+                    <li>Produces Anti-oxidants into the body, good for preventing premature aging.</li>
+                    <li> Lowers the risks of heart problems because it is rich in flavonoids and gallic acid which include protective elements for cardio.</li>
+                    <li>It also promotes good digestion.</li>
+                    <li> It is also good for preventing cancer.</li>
+                    <li>Current studies proven that it slows down the decline of nervous activities which happens with the age.</li>
+                    <li>It indicates a help for the treatment of kidney stones and anemia.</li>
+                    <li>It prevents the clumping of blood platelets which results in blood clots.</li>
+                    <li>
+                        Many of us, chocolate lovers, know that chocolate contains Flavanol This compound prevents clogging of the arteries.
+                        Flavanol also helps to protect against sunburns.
+                    </li>
+                </ul>
+
+            </div>
+            <div id="content">
+                <div id="box1">
+                    <div class="blogpost">
+                        <br />
+                        <h2>Disadvantages Of Chocolates</h2>
+                        <br/>
+                        <p>
+                            The wonderful and enticing feeling of a person in eating chocolate has their disadvantages.
+                             But the craving for chocolate deserves only a single bite of chocolate. Even there are chocolates that are low in fat and calories; still it has oils that can transfer the fat to the heart. 
+                            Therefore, a chocolate lover should look unto the label first.</p>
+                        <ul>
+                            <li> Dark chocolates are high on calories with high fat and sugar.</li>
+                            <li>It contains some elements that have addictive properties such as caffeine, theobromine, 
+                            and sugar which results in mood elevating and also contains phenethylamine which releases endorphin in the brain.</li>
+                            <li>  It also contains vasoactive amines that lead to migraine problems.</li>
+                            <li>Dilates the vessels of the brain.</li>
+                            <li>Moreover, it has high quantity of arginine which is a necessity in the replication of the virus herpes. 
+                                Therefore, it is recommended to avoid dark chocolates especially those who have recurring and active herpes infection.</li>
+                        </ul>
+                    </div>
+                    <div id="center"><img src="~/images/12.jpg" width="250" height="275" alt="" /></div>
+                   
+                    <br />
+                   
+                    </div>
+
+                    <div id="center">
+                       
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+</body>
+</html>

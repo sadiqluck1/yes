@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Success";
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+    Cookies n' Cream by FWT
+    www.freewebsitetemplat.es
+    Images by Image Base http://imagebase.davidniblack.com/
+    Released under the Creative Commons Attribution 3.0 License.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cookies n' Cream</title>
+    <link href="http://fonts.googleapis.com/css?family=Shanti" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/content/style.css" />
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="logo">
+                <h1> Chocolate Recipes</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li class="first active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Menu", "Menu", "Menu")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chocolate Category", "Category", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li class="last">
+                        @Html.ActionLink("Sign Up/Sign In", "Login", "Account")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <img src="~/images/2.png" width="910" height="225" alt="" />
+        </div>
+        <div id="main">
+            <div id="sidebar">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h3>Sign In</h3>
+                @{Html.BeginForm("Check", "Account", FormMethod.Post);}
+                <br />
+
+                @Html.Label("Email : ")
+                <br />
+                @Html.Editor("email")
+                <br />
+                @Html.Label("Password : ")
+                <br />
+                @Html.Password("pass")
+                <br />
+                <input id="add" type="submit" value="Sign In" />
+                <br />
+                <br />
+                @{Html.EndForm();}
+
+            </div>
+            <div id="content">
+                <div id="box1">
+                    <div class="blogpost">
+
+                        <br /><br /><br />
+       
+                      <h3>Your Account has been Created.</h3>
+                        <p>Now Sign In And Add the Recipes.</p>
+                    </div>
+
+                </div>
+                <img class="left" src="~/images/4.png" width="500" height="275" alt="" />
+                <br class="clear" />
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+</body>
+</html>
+
+
